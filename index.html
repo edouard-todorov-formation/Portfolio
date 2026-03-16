@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="winter">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Edouard</title>
+    <meta name="description" content="Portfolio d'Edouard, développeur web. Présentation, compétences, projets et moyens de contact.">
+
+    <!-- Tailwind + DaisyUI (CDN uniquement) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-base-200 text-base-content">
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar bg-base-100 shadow-md sticky top-0 z-20 backdrop-blur bg-opacity-90">
+        <div class="navbar-start">
+            <a href="#hero" class="flex items-center gap-2">
+                <img src="images/Logo.png" alt="logo Edouard" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
+                <span class="font-bold text-xl tracking-tight">Edouard</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden md:flex">
+            <ul class="menu menu-horizontal px-1 gap-2">
+                <li><a href="#about" class="text-sm font-medium">À propos</a></li>
+                <li><a href="#stacks" class="text-sm font-medium">Stacks</a></li>
+                <li><a href="#soft-skills" class="text-sm font-medium">Soft Skills</a></li>
+
+
+            </ul>
+        </div>
+        <div class="navbar-end md:hidden">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#stacks">Stacks</a></li>
+                    <li><a href="#soft-skills">Soft Skills</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="bg-base-200">
+        <!-- HERO -->
+        <section id="hero" class="min-h-screen flex items-center justify-center px-4">
+            <div class="max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4">
+                    <p class="uppercase tracking-[0.25em] text-xs text-blue-500 font-semibold">Développeur web</p>
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                        Bonjour, moi c'est <span class="text-blue-500">Edouard</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-base-content/80">
+                        Je conçois et développe des applications web modernes, performantes
+                        et maintenables, avec un focus sur l'expérience utilisateur et la qualité du code.
+                    </p>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <div class="relative">
+                        <div class="absolute inset-0 blur-3xl bg-gradient-to-tr from-primary/40 via-secondary/30 to-accent/40 -z-10"></div>
+                        <div class="avatar">
+                            <div class="w-48 md:w-64 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 hover:scale-105 transition-transform duration-700">
+                                <img src="images/edouard.png" alt="Edouard">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-16 px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-center">À propos de moi</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <p>
+                            Je suis un développeur web passionné par les technologies modernes comme
+                            <span class="font-semibold">React</span>, <span class="font-semibold">NodeJS</span>,
+                            <span class="font-semibold">Symfony</span> et <span class="font-semibold">Tailwind CSS</span>.
+                        </p>
+                        <p>
+                            J'aime transformer des idées en produits concrets, propres et bien structurés,
+                            en mettant l'accent sur la lisibilité du code, les bonnes pratiques et la collaboration
+                            avec les équipes produit et design.
+                        </p>
+                        <p>
+                            Toujours curieux, je me forme en continu pour rester à jour et proposer des solutions
+                            robustes et pérennes.
+                        </p>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="card-title mb-2">En quelques points</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center gap-2">
+                                    <span class="badge badge-neutral badge-sm"></span>
+                                    <span>Expérience en développement front et back</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="badge badge-neutral badge-sm"></span>
+                                    <span>Habitué au travail en équipe agile</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="badge badge-neutral badge-sm"></span>
+                                    <span>Confortable avec Git, revues de code et CI/CD</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACKS -->
+        <section id="stacks" class="py-16 px-4 bg-base-300">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold">Stacks</h2>
+                        <p class="text-base-content/70">
+                            Les technologies que j'utilise le plus au quotidien.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-outline badge-sm">Front-end</span>
+                        <span class="badge badge-outline badge-sm">Back-end</span>
+                        <span class="badge badge-outline badge-sm">Outils</span>
+                    </div>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Github -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto">
+                            <img
+                                src="images/Github.png"
+                                class="w-20 h-20 object-contain"
+                        alt="Github" />
+                    </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Github</h3>
+                            <p class="text-sm">
+                                Gestion de code source, branches, pull requests et intégration continue
+                                pour des workflows d'équipe efficaces.
+                            </p>
+                      <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Versioning</span>
+                      </div>
+                    </div>
+                  </article>
+
+                    <!-- NodeJS -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto">
+                      <img
+                                src="images/NodeJS.png"
+                                class="w-20 h-20 object-contain"
+                        alt="NodeJS" />
+                    </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">NodeJS</h3>
+                            <p class="text-sm">
+                                Développement de backends performants en JavaScript, APIs REST et intégration
+                                avec des bases de données et services externes.
+                            </p>
+                      <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Backend</span>
+                      </div>
+                    </div>
+                  </article>
+
+                    <!-- React -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto">
+                      <img
+                                src="images/React.png"
+                                class="w-20 h-20 object-contain"
+                        alt="React" />
+                    </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">React</h3>
+                            <p class="text-sm">
+                                Création d'interfaces utilisateurs dynamiques, réactives et maintenables
+                                avec composants réutilisables.
+                            </p>
+                      <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Front-end</span>
+                      </div>
+                    </div>
+                  </article>
+
+                    <!-- Tailwind -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto">
+                      <img
+                                src="images/Tailwind.png"
+                                class="w-20 h-20 object-contain"
+                        alt="Tailwind" />
+                    </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Tailwind CSS</h3>
+                            <p class="text-sm">
+                                Design rapide et cohérent avec un système d'utilitaires puissant,
+                                complété par les composants DaisyUI.
+                            </p>
+                      <div class="card-actions justify-end">
+                                <span class="badge badge-outline">UI</span>
+                      </div>
+                    </div>
+                  </article>
+
+                    <!-- PHP -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto">
+                      <img
+                                src="images/PHP.png"
+                                class="w-20 h-20 object-contain"
+                        alt="PHP" />
+                    </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">PHP</h3>
+                            <p class="text-sm">
+                                Développement d'applications web robustes avec une grande base d'outils
+                                et de bibliothèques existantes.
+                            </p>
+                      <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Backend</span>
+                      </div>
+                    </div>
+                  </article>
+
+                    <!-- Symfony -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto">
+                      <img
+                                src="images/Symfony.png"
+                                class="w-20 h-20 object-contain"
+                        alt="Symfony" />
+                    </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Symfony</h3>
+                            <p class="text-sm">
+                                Framework PHP structuré pour construire des applications scalables
+                                avec une architecture claire (MVC, services, etc.).
+                            </p>
+                      <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Framework</span>
+                      </div>
+                    </div>
+                  </article>
+            </div>
+            </div>
+        </section>
+        <!-- SOFT SKILLS -->
+        <section id="soft-skills" class="py-16 px-4 bg-base-100">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Soft Skills</h2>
+                <p class="text-center text-base-content/70 max-w-2xl mx-auto mb-10">
+                    Au-delà des compétences techniques, je mise sur l'humain, la communication
+                    et la capacité à m'adapter rapidement aux besoins du projet.
+                </p>
+
+                <div class="grid gap-6 md:grid-cols-3 mb-10">
+                    <article class="card bg-blue-500 shadow-md hover:shadow-xl hover:scale-[1.02] transition-transform duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-xl font-bold uppercase text-white">Communication claire</h3>
+                            <p class="text-sm text-base-content/80 text-white">
+                                Capacité à vulgariser les sujets techniques et à échanger
+                                efficacement avec les profils métiers, design et techniques.
+                            </p>
+                            <div class="card-actions justify-end mt-2">
+                                <span class="badge badge-outline badge-sm text-white">Communication</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card bg-blue-500 shadow-md hover:shadow-xl hover:scale-[1.02] transition-transform duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-xl font-bold uppercase text-white">Esprit d'équipe</h3>
+                            <p class="text-sm text-base-content/80 text-white">
+                                Habitué au travail en équipe, aux revues de code et aux itérations rapides
+                                pour faire avancer le projet dans la bonne direction.
+                            </p>
+                            <div class="card-actions justify-end mt-2">
+                                <span class="badge badge-outline badge-sm text-white">Collaboration</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card bg-blue-500 shadow-md hover:shadow-xl hover:scale-[1.02] transition-transform duration-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-xl font-bold uppercase text-white">Autonomie & curiosité</h3>
+                            <p class="text-sm text-base-content/80 text-white">
+                                Autonome sur les sujets qui me sont confiés, tout en sachant demander de l'aide
+                                et me former en continu pour proposer des solutions pertinentes.
+                            </p>
+                            <div class="card-actions justify-end mt-2">
+                                <span class="badge badge-outline badge-sm text-white">Autonomie</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="flex flex-wrap gap-2 justify-center text-sm text-base-content/70">
+                    <span class="badge badge-outline">Communication</span>
+                    <span class="badge badge-outline">Esprit d'équipe</span>
+                    <span class="badge badge-outline">Curiosité</span>
+                    <span class="badge badge-outline">Rigueur</span>
+                    <span class="badge badge-outline">Adaptabilité</span>
+                    <span class="badge badge-outline">Autonomie</span>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer footer-center bg-base-300 text-base-content py-6">
+        <aside>
+            <p class="font-semibold">© 2025 Edouard - Tous droits réservés</p>
+            <p class="text-xs text-base-content/70">
+                Portfolio réalisé avec Tailwind CSS et DaisyUI.
+            </p>
+        </aside>
+        </footer>
+</body>
+</html>
