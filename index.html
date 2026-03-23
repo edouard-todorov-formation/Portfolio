@@ -1,3 +1,5 @@
+<!-- Suprimer tracking-wide sur la ligne correspondante pour enlever le letter spacing -->
+
 <!DOCTYPE html>
 <html lang="fr" data-theme="winter">
 <head>
@@ -9,14 +11,36 @@
     <!-- Tailwind + DaisyUI (CDN uniquement) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="assets/js/script.js"></script>
+
+    <!-- Taille de police globale (tout le site via rem) -->
+    <style type="text/tailwindcss">
+        @layer base {
+            /* Desktop par défaut (> 450px) */
+            html {
+                font-size: 16px; /* ajuste cette valeur pour agrandir/réduire le texte desktop */
+            }
+
+            /* Mobile (<= 450px) */
+            @media (max-width: 450px) {
+                html {
+                    font-size: 16px; /* ajuste cette valeur pour agrandir/réduire le texte mobile */
+                }
+            }
+        }
+    </style>
 </head>
-<body class="min-h-screen bg-base-200 text-base-content">
-    <!-- HEADER / NAVBAR -->
+<body class="min-h-screen bg-base-200 text-base-content tracking-wide">
+
+    <!--
+    #########################################################
+    # HEADER / NAVBAR
+    #########################################################
+    -->
     <header class="navbar bg-base-100 shadow-md sticky top-0 z-20 backdrop-blur bg-opacity-90">
         <div class="navbar-start">
             <a href="#hero" class="flex items-center gap-2">
-                <img src="images/Logo.png" alt="logo Edouard" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
+                <img src="assets/images/Logo.png" alt="logo Edouard" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
                 <span class="font-bold text-xl tracking-tight">Edouard</span>
             </a>
         </div>
@@ -37,14 +61,26 @@
                     </svg>
                 </label>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#stacks">Stacks</a></li>
-                    <li><a href="#soft-skills">Soft Skills</a></li>
+                    <li><a href="#about" class="text-base">À propos</a></li>
+                    <li><a href="#stacks" class="text-base">Stacks</a></li>
+                    <li><a href="#soft-skills" class="text-base">Soft Skills</a></li>
                 </ul>
             </div>
         </div>
     </header>
+    <!--
+    #########################################################
+    # MAIN
+    #########################################################
+    -->
     <main class="bg-base-200">
+        <!-- Flèche d'indication visible uniquement quand on est tout en haut de page -->
+        <span id="scrollTopHint" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-opacity duration-200 opacity-0 pointer-events-none">
+            <svg class="w-6 h-6 animate-bounce text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </span>
+
         <!-- HERO -->
         <section id="hero" class="min-h-screen flex items-center justify-center px-4">
             <div class="max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">
@@ -63,7 +99,7 @@
                         <div class="absolute inset-0 blur-3xl bg-gradient-to-tr from-primary/40 via-secondary/30 to-accent/40 -z-10"></div>
                         <div class="avatar">
                             <div class="w-48 md:w-64 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 hover:scale-105 transition-transform duration-700">
-                                <img src="images/edouard.png" alt="Edouard">
+                                <img src="assets/images/edouard.png" alt="Edouard">
                             </div>
                         </div>
                     </div>
@@ -77,17 +113,17 @@
                 <h2 class="text-3xl font-bold mb-6 text-center">À propos de moi</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
-                        <p>
+                        <p class="text-base">
                             Je suis un développeur web passionné par les technologies modernes comme
                             <span class="font-semibold">React</span>, <span class="font-semibold">NodeJS</span>,
                             <span class="font-semibold">Symfony</span> et <span class="font-semibold">Tailwind CSS</span>.
                         </p>
-                        <p>
+                        <p class="text-base">
                             J'aime transformer des idées en produits concrets, propres et bien structurés,
                             en mettant l'accent sur la lisibilité du code, les bonnes pratiques et la collaboration
                             avec les équipes produit et design.
                         </p>
-                        <p>
+                        <p class="text-base">
                             Toujours curieux, je me forme en continu pour rester à jour et proposer des solutions
                             robustes et pérennes.
                         </p>
@@ -121,7 +157,7 @@
                 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
                     <div>
                         <h2 class="text-3xl font-bold">Stacks</h2>
-                        <p class="text-base-content/70">
+                        <p class="text-base-content/70 text-base">
                             Les technologies que j'utilise le plus au quotidien.
                         </p>
                     </div>
@@ -135,9 +171,9 @@
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Github -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                        <figure class="w-30 h-30 mx-auto">
+                        <figure class="w-30 h-30 mx-auto p-5">
                             <img
-                                src="images/Github.png"
+                                src="assets/images/Github.png"
                                 class="w-20 h-20 object-contain"
                         alt="Github" />
                     </figure>
@@ -155,9 +191,9 @@
 
                     <!-- NodeJS -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                        <figure class="w-30 h-30 mx-auto">
+                        <figure class="w-30 h-30 mx-auto p-5">
                       <img
-                                src="images/NodeJS.png"
+                                src="assets/images/NodeJS.png"
                                 class="w-20 h-20 object-contain"
                         alt="NodeJS" />
                     </figure>
@@ -175,9 +211,9 @@
 
                     <!-- React -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                        <figure class="w-30 h-30 mx-auto">
+                        <figure class="w-30 h-30 mx-auto p-5">
                       <img
-                                src="images/React.png"
+                                src="assets/images/React.png"
                                 class="w-20 h-20 object-contain"
                         alt="React" />
                     </figure>
@@ -195,9 +231,9 @@
 
                     <!-- Tailwind -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                        <figure class="w-30 h-30 mx-auto">
+                        <figure class="w-30 h-30 mx-auto p-5">
                       <img
-                                src="images/Tailwind.png"
+                                src="assets/images/Tailwind.png"
                                 class="w-20 h-20 object-contain"
                         alt="Tailwind" />
                     </figure>
@@ -215,9 +251,9 @@
 
                     <!-- PHP -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                        <figure class="w-30 h-30 mx-auto">
+                        <figure class="w-30 h-30 mx-auto p-5">
                       <img
-                                src="images/PHP.png"
+                                src="assets/images/PHP.png"
                                 class="w-20 h-20 object-contain"
                         alt="PHP" />
                     </figure>
@@ -235,9 +271,9 @@
 
                     <!-- Symfony -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                        <figure class="w-30 h-30 mx-auto">
+                        <figure class="w-30 h-30 mx-auto p-5">
                       <img
-                                src="images/Symfony.png"
+                                src="assets/images/Symfony.png"
                                 class="w-20 h-20 object-contain"
                         alt="Symfony" />
                     </figure>
@@ -259,7 +295,7 @@
         <section id="soft-skills" class="py-16 px-4 bg-base-100">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-bold mb-4 text-center">Soft Skills</h2>
-                <p class="text-center text-base-content/70 max-w-2xl mx-auto mb-10">
+                <p class="text-center text-base-content/70 max-w-2xl mx-auto mb-10 text-base">
                     Au-delà des compétences techniques, je mise sur l'humain, la communication
                     et la capacité à m'adapter rapidement aux besoins du projet.
                 </p>
@@ -315,18 +351,24 @@
                 </div>
             </div>
         </section>
-
-        
     </main>
 
-    <!-- FOOTER -->
+    <!--
+    #########################################################
+    # FOOTER
+    #########################################################
+    -->
     <footer class="footer footer-center bg-base-300 text-base-content py-6">
         <aside>
-            <p class="font-semibold">© 2025 Edouard - Tous droits réservés</p>
+            <p class="font-semibold">© 2025 Edouard Todorov - Tous droits réservés</p>
             <p class="text-xs text-base-content/70">
-                Portfolio réalisé avec Tailwind CSS et DaisyUI.
+                Portfolio réalisé avec Tailwind CSS, DaisyUI et JavaScript.
+            </p>
+            <p class="text-xs text-base-content/70">
+                Photo : edouard.png (Edouard Todorov) - Tous droits réservés.
             </p>
         </aside>
         </footer>
+
 </body>
 </html>
