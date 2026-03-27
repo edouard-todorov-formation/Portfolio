@@ -30,7 +30,7 @@ Ce projet presente :
 
 Le projet est statique. Il suffit d'ouvrir `index.html` dans un navigateur.
 
-Pour une meilleure experience, tu peux aussi utiliser un serveur local.
+Pour une meilleure experience, vous pouvez aussi utiliser un serveur local.
 
 ## Fonctionnalites
 
