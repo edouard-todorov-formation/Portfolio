@@ -11,24 +11,9 @@
     <!-- Tailwind + DaisyUI (CDN uniquement) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- chargement du script JS -->
     <script defer src="assets/js/script.js"></script>
-
-    <!-- Taille de police globale (tout le site via rem) -->
-    <style type="text/tailwindcss">
-        @layer base {
-            /* Desktop par défaut (> 450px) */
-            html {
-                font-size: 16px; /* ajuste cette valeur pour agrandir/réduire le texte desktop */
-            }
-
-            /* Mobile (<= 450px) */
-            @media (max-width: 450px) {
-                html {
-                    font-size: 16px; /* ajuste cette valeur pour agrandir/réduire le texte mobile */
-                }
-            }
-        }
-    </style>
 </head>
 <body class="min-h-screen bg-base-200 text-base-content tracking-wide">
 
@@ -44,17 +29,24 @@
                 <span class="font-bold text-xl tracking-tight">Edouard</span>
             </a>
         </div>
+
+        <!-- menu desktop -->
         <div class="navbar-center hidden md:flex">
             <ul class="menu menu-horizontal px-1 gap-2">
                 <li><a href="#about" class="text-sm font-medium">À propos</a></li>
                 <li><a href="#stacks" class="text-sm font-medium">Stacks</a></li>
                 <li><a href="#soft-skills" class="text-sm font-medium">Soft Skills</a></li>
-
-
             </ul>
         </div>
-        <div class="navbar-end md:hidden">
-            <div class="dropdown dropdown-end">
+        <div class="navbar-end gap-2">
+
+            <!-- Theme toggle button -->
+            <button id="themeToggle" class="btn btn-ghost btn-sm btn-circle" type="button" aria-label="Changer de theme">
+                <img id="themeIconImage" src="assets/images/icon-moon.svg" alt="dark theme icon" class="w-5 h-5" />
+            </button>
+
+            <!-- Menu burger -->
+            <div class="dropdown dropdown-end md:hidden">
                 <label tabindex="0" class="btn btn-ghost btn-circle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -76,7 +68,7 @@
     <main class="bg-base-200">
         <!-- Flèche d'indication visible uniquement quand on est tout en haut de page -->
         <span id="scrollTopHint" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-opacity duration-200 opacity-0 pointer-events-none">
-            <svg class="w-6 h-6 animate-bounce text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 animate-bounce text-base-content" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
         </span>
@@ -133,15 +125,15 @@
                             <h3 class="card-title mb-2">En quelques points</h3>
                             <ul class="space-y-2 text-sm">
                                 <li class="flex items-center gap-2">
-                                    <span class="badge badge-neutral badge-sm"></span>
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content"></span>
                                     <span>Expérience en développement front et back</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <span class="badge badge-neutral badge-sm"></span>
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content"></span>
                                     <span>Habitué au travail en équipe agile</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <span class="badge badge-neutral badge-sm"></span>
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content"></span>
                                     <span>Confortable avec Git, revues de code et CI/CD</span>
                                 </li>
                             </ul>
@@ -174,121 +166,188 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/Github.png"
-                                class="w-20 h-20 object-contain"
-                        alt="Github" />
-                    </figure>
+                                class="w-20 h-20 object-contain theme-icon"
+                                alt="Github"
+                            />
+                        </figure>
                         <div class="card-body">
                             <h3 class="card-title">Github</h3>
                             <p class="text-sm">
                                 Gestion de code source, branches, pull requests et intégration continue
                                 pour des workflows d'équipe efficaces.
                             </p>
-                      <div class="card-actions justify-end">
+                            <div class="card-actions justify-end">
                                 <span class="badge badge-outline">Versioning</span>
-                      </div>
-                    </div>
-                  </article>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- JavaScript -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto p-5">
+                            <img
+                                src="assets/images/javascript.svg"
+                                class="w-20 h-20 object-contain"
+                                alt="JavaScript"
+                            />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">JavaScript</h3>
+                            <p class="text-sm">
+                                Développement d'interfaces dynamiques et de logique applicative
+                                pour des expériences web modernes et interactives.
+                            </p>
+                            <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Front-end</span>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- NodeJS -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
                         <figure class="w-30 h-30 mx-auto p-5">
-                      <img
+                            <img
                                 src="assets/images/NodeJS.png"
                                 class="w-20 h-20 object-contain"
-                        alt="NodeJS" />
-                    </figure>
+                                alt="NodeJS"
+                            />
+                        </figure>
                         <div class="card-body">
                             <h3 class="card-title">NodeJS</h3>
                             <p class="text-sm">
                                 Développement de backends performants en JavaScript, APIs REST et intégration
                                 avec des bases de données et services externes.
                             </p>
-                      <div class="card-actions justify-end">
+                            <div class="card-actions justify-end">
                                 <span class="badge badge-outline">Backend</span>
-                      </div>
-                    </div>
-                  </article>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Express -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto p-5">
+                            <img
+                                src="assets/images/express.svg"
+                                class="w-20 h-20 object-contain theme-icon"
+                                alt="Express" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Express</h3>
+                            <p class="text-sm">
+                                Création d'APIs et de serveurs web en Node.js avec une structure
+                                simple, rapide et adaptée aux applications modernes.
+                            </p>
+                            <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Backend</span>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- React -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
                         <figure class="w-30 h-30 mx-auto p-5">
-                      <img
+                            <img
                                 src="assets/images/React.png"
                                 class="w-20 h-20 object-contain"
-                        alt="React" />
-                    </figure>
+                                alt="React"
+                            />
+                        </figure>
                         <div class="card-body">
                             <h3 class="card-title">React</h3>
                             <p class="text-sm">
                                 Création d'interfaces utilisateurs dynamiques, réactives et maintenables
                                 avec composants réutilisables.
                             </p>
-                      <div class="card-actions justify-end">
+                            <div class="card-actions justify-end">
                                 <span class="badge badge-outline">Front-end</span>
-                      </div>
-                    </div>
-                  </article>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- Tailwind -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
                         <figure class="w-30 h-30 mx-auto p-5">
-                      <img
+                            <img
                                 src="assets/images/Tailwind.png"
                                 class="w-20 h-20 object-contain"
-                        alt="Tailwind" />
-                    </figure>
+                                alt="Tailwind CSS"
+                            />
+                        </figure>
                         <div class="card-body">
                             <h3 class="card-title">Tailwind CSS</h3>
                             <p class="text-sm">
                                 Design rapide et cohérent avec un système d'utilitaires puissant,
                                 complété par les composants DaisyUI.
                             </p>
-                      <div class="card-actions justify-end">
+                            <div class="card-actions justify-end">
                                 <span class="badge badge-outline">UI</span>
-                      </div>
-                    </div>
+                            </div>
+                        </div>
                   </article>
 
                     <!-- PHP -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
                         <figure class="w-30 h-30 mx-auto p-5">
-                      <img
+                            <img
                                 src="assets/images/PHP.png"
                                 class="w-20 h-20 object-contain"
-                        alt="PHP" />
-                    </figure>
+                                alt="PHP"
+                            />
+                        </figure>
                         <div class="card-body">
                             <h3 class="card-title">PHP</h3>
                             <p class="text-sm">
                                 Développement d'applications web robustes avec une grande base d'outils
                                 et de bibliothèques existantes.
                             </p>
-                      <div class="card-actions justify-end">
+                            <div class="card-actions justify-end">
                                 <span class="badge badge-outline">Backend</span>
-                      </div>
-                    </div>
-                  </article>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- Symfony -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
                         <figure class="w-30 h-30 mx-auto p-5">
-                      <img
+                            <img
                                 src="assets/images/Symfony.png"
                                 class="w-20 h-20 object-contain"
-                        alt="Symfony" />
-                    </figure>
+                                alt="Symfony"
+                            />
+                        </figure>
                         <div class="card-body">
                             <h3 class="card-title">Symfony</h3>
                             <p class="text-sm">
                                 Framework PHP structuré pour construire des applications scalables
                                 avec une architecture claire (MVC, services, etc.).
                             </p>
-                      <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Framework</span>
-                      </div>
-                    </div>
-                  </article>
-            </div>
+                            <div class="card-actions justify-end">
+                                        <span class="badge badge-outline">Framework</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Docker -->
+                    <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                        <figure class="w-30 h-30 mx-auto p-5">
+                            <img
+                                src="assets/images/docker.svg"
+                                class="w-20 h-20 object-contain"
+                                alt="Docker" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Docker</h3>
+                            <p class="text-sm">
+                                Conteneurisation des applications pour standardiser les environnements,
+                                faciliter le déploiement et améliorer la reproductibilité.
+                            </p>
+                            <div class="card-actions justify-end">
+                                <span class="badge badge-outline">Outils</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
         <!-- SOFT SKILLS -->

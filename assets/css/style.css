@@ -1,0 +1,27 @@
+/*#########################################################
+# Desktop css rules
+#########################################################*/
+/* Taille de police globale (tout le site via rem) */
+html {
+    font-size: 17px;
+}
+
+/*#########################################################
+# Mobile css rules (<= 450px)
+#########################################################*/
+@media (max-width: 450px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/*#########################################################
+# Theme icon filter (pour les icones en SVG)
+#########################################################*/
+.theme-icon {
+    filter: none;
+}
+/* Dark theme filter for theme icons in SVG */
+[data-theme="dark"] .theme-icon {
+    filter: brightness(0) invert(1);
+}
