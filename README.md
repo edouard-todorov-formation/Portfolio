@@ -49,26 +49,47 @@ Installez les dependances avec :
 
 - `npm ci`
 
+Sous PowerShell, si `npm` est bloque, utilisez :
+
+- `npm.cmd ci`
+
 Puis generez le CSS avec :
 
 - `npm run build:css`
+
+Sous PowerShell, vous pouvez aussi utiliser :
+
+- `npm.cmd run build:css`
 
 Pour recompiler automatiquement le CSS pendant le developpement :
 
 - `npm run watch:css`
 
+Sous PowerShell, vous pouvez aussi utiliser :
+
+- `npm.cmd run watch:css`
+
 Ensuite, ouvrez `index.html` dans un navigateur.
 
 ## Deploiement
 
-- `node_modules/` n'est pas versionne
-- `assets/css/output.css` n'est pas versionne
-- le CSS est regenere au moment du build
+Pour un hebergement statique comme o2switch, le plus simple est de generer le CSS en local puis d'envoyer les fichiers deja buildes.
 
-Commande recommandee avant une mise en ligne ou dans une CI :
+Workflow recommande :
 
 - `npm ci`
 - `npm run build:css`
+
+Puis envoyez en ligne :
+
+- `index.html`
+- `assets/`
+
+Notes :
+
+- `node_modules/` n'est pas versionne
+- `assets/css/output.css` est versionne et envoye en production
+- il n'est pas necessaire de lancer `npm` sur o2switch si Node.js / npm n'est pas disponible dans le terminal
 
   ##########################################
  ######### Fonctionnalites ################
