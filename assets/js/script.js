@@ -36,13 +36,13 @@ function setupDisableEdouardRightClick() {
 setupDisableEdouardRightClick();
 
  /*#########################################################
- # Fonction pour alterner entre les themes winter et dark
+ # Fonction pour alterner entre les themes light et dark
 #########################################################*/
 function toggleTheme() {
     const toggleBtn = document.getElementById("themeToggle");
     const iconImage = document.getElementById("themeIconImage");
     const page = document.documentElement;
-    const defaultTheme = page.getAttribute("data-theme") || "winter";
+    const defaultTheme = page.getAttribute("data-theme") || "light";
     const storageKey = "portfolio-theme";
     const savedTheme = localStorage.getItem(storageKey);
 
@@ -51,7 +51,7 @@ function toggleTheme() {
 
     // Fonction pour appliquer le thème
     function applyTheme(theme) {
-        const nextTheme = theme === "dark" ? "dark" : "winter";
+        const nextTheme = theme === "dark" ? "dark" : "light";
         page.setAttribute("data-theme", nextTheme);
         if (iconImage) {
             iconImage.src = nextTheme === "dark" ? "assets/images/icon-sun.svg" : "assets/images/icon-moon.svg";
@@ -64,7 +64,7 @@ function toggleTheme() {
     // Écouteur d'événement pour le bouton de toggle
     toggleBtn.addEventListener("click", () => {
         const currentTheme = page.getAttribute("data-theme");
-        const nextTheme = currentTheme === "dark" ? "winter" : "dark";
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
         applyTheme(nextTheme);
         localStorage.setItem(storageKey, nextTheme);
     });

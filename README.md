@@ -13,7 +13,7 @@ Ce projet presente :
 - une section "A propos"
 - une section "Stacks"
 - une section "Soft Skills"
-- un switch de theme `winter` / `dark`
+- un switch de theme `light` / `dark`
 
   ##########################################
  #########Technologies utilisees ##########
@@ -23,12 +23,18 @@ Ce projet presente :
 - Tailwind CSS
 - DaisyUI
 - JavaScript
+- Tailwind CLI
+- npm
 
   ##########################################
  ######### Structure ######################
 ##########################################
 
 - `index.html` : structure principale du portfolio
+- `package.json` : scripts et dependances du projet
+- `package-lock.json` : verrouillage exact des dependances
+- `assets/css/input.css` : point d'entree Tailwind + DaisyUI
+- `assets/css/output.css` : CSS compile genere au build
 - `assets/css/style.css` : styles personnalises
 - `assets/js/script.js` : comportements interactifs
 - `assets/images/` : images et icones
@@ -37,7 +43,32 @@ Ce projet presente :
  ######### Lancer le projet ###############
 ##########################################
 
-Il suffit d'ouvrir `index.html` dans un navigateur.
+## Installation
+
+Installez les dependances avec :
+
+- `npm ci`
+
+Puis generez le CSS avec :
+
+- `npm run build:css`
+
+Pour recompiler automatiquement le CSS pendant le developpement :
+
+- `npm run watch:css`
+
+Ensuite, ouvrez `index.html` dans un navigateur.
+
+## Deploiement
+
+- `node_modules/` n'est pas versionne
+- `assets/css/output.css` n'est pas versionne
+- le CSS est regenere au moment du build
+
+Commande recommandee avant une mise en ligne ou dans une CI :
+
+- `npm ci`
+- `npm run build:css`
 
   ##########################################
  ######### Fonctionnalites ################
@@ -83,6 +114,18 @@ et la variante dark :
 - `[data-theme="dark"] .theme-icon`
 
 Cela permet de garder certaines icones lisibles sur fond clair et sombre.
+
+### Compilation Tailwind
+
+Le projet utilise Tailwind CLI avec DaisyUI en local.
+
+Le fichier source principal est :
+
+- `assets/css/input.css`
+
+Le fichier genere est :
+
+- `assets/css/output.css`
 
 ## Auteur
 

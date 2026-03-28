@@ -1,17 +1,14 @@
 <!-- Suprimer tracking-wide sur la ligne correspondante pour enlever le letter spacing -->
 
 <!DOCTYPE html>
-<html lang="fr" data-theme="winter">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Edouard</title>
     <meta name="description" content="Portfolio d'Edouard, développeur web. Présentation, compétences, projets et moyens de contact.">
 
-    <!-- Tailwind + DaisyUI (CDN uniquement) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/output.css">
     <!-- chargement du script JS -->
     <script defer src="assets/js/script.js"></script>
 </head>
@@ -25,7 +22,7 @@
     <header class="navbar bg-base-100 shadow-md sticky top-0 z-20 backdrop-blur bg-opacity-90">
         <div class="navbar-start">
             <a href="#hero" class="flex items-center gap-2">
-                <img src="assets/images/Logo.webp" alt="logo Edouard" width="620" height="620" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
+                <img src="assets/images/logo.webp" alt="logo Edouard" width="620" height="620" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
                 <span class="font-bold text-xl tracking-tight">Edouard</span>
             </a>
         </div>
@@ -88,9 +85,9 @@
                 </div>
                 <div class="flex justify-center md:justify-end">
                     <div class="relative">
-                        <div class="absolute inset-0 blur-3xl bg-gradient-to-tr from-primary/40 via-secondary/30 to-accent/40 -z-10"></div>
+                        <div class="absolute inset-0 blur-3xl bg-gradient-to-tr from-blue-300/40 via-secondary/30 to-accent/40 -z-10"></div>
                         <div class="avatar">
-                            <div class="w-48 md:w-64 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 hover:scale-105 transition-transform duration-700">
+                            <div class="w-48 md:w-64 rounded-full ring-3 ring-blue-300 ring-offset-base-100 ring-offset-4 hover:scale-105 transition-transform duration-700">
                                 <img src="assets/images/edouard.webp" alt="Edouard" width="600" height="600" fetchpriority="high">
                             </div>
                         </div>
@@ -153,10 +150,10 @@
                             Les technologies que j'utilise le plus au quotidien.
                         </p>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-outline badge-sm">Front-end</span>
-                        <span class="badge badge-outline badge-sm">Back-end</span>
-                        <span class="badge badge-outline badge-sm">Outils</span>
+                    <div class="flex flex-wrap gap-6 mr-2">
+                        <span class="badge-sm">Front-end</span>
+                        <span class="badge-sm">Back-end</span>
+                        <span class="badge-sm">Outils</span>
                     </div>
                 </div>
 
@@ -179,7 +176,7 @@
                                 pour des workflows d'équipe efficaces.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Versioning</span>
+                                <span class="mr-3">Versioning</span>
                             </div>
                         </div>
                     </article>
@@ -202,7 +199,7 @@
                                 pour des expériences web modernes et interactives.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Front-end</span>
+                                <span class="mr-3">Front-end</span>
                             </div>
                         </div>
                     </article>
@@ -225,7 +222,7 @@
                                 avec des bases de données et services externes.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Backend</span>
+                                <span class="mr-3">Backend</span>
                             </div>
                         </div>
                     </article>
@@ -247,7 +244,7 @@
                                 simple, rapide et adaptée aux applications modernes.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Backend</span>
+                                <span class="mr-3">Backend</span>
                             </div>
                         </div>
                     </article>
@@ -270,7 +267,7 @@
                                 avec composants réutilisables.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Front-end</span>
+                                <span class="mr-3">Front-end</span>
                             </div>
                         </div>
                     </article>
@@ -293,7 +290,7 @@
                                 complété par les composants DaisyUI.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">UI</span>
+                                <span class="mr-3">UI</span>
                             </div>
                         </div>
                   </article>
@@ -316,7 +313,7 @@
                                 et de bibliothèques existantes.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Backend</span>
+                                <span class="mr-3">Backend</span>
                             </div>
                         </div>
                     </article>
@@ -339,7 +336,7 @@
                                 avec une architecture claire (MVC, services, etc.).
                             </p>
                             <div class="card-actions justify-end">
-                                        <span class="badge badge-outline">Framework</span>
+                                        <span class="mr-3">Framework</span>
                             </div>
                         </div>
                     </article>
@@ -361,7 +358,7 @@
                                 faciliter le déploiement et améliorer la reproductibilité.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="badge badge-outline">Outils</span>
+                                <span class="mr-3">Outils</span>
                             </div>
                         </div>
                     </article>
@@ -385,8 +382,8 @@
                                 Capacité à vulgariser les sujets techniques et à échanger
                                 efficacement avec les profils métiers, design et techniques.
                             </p>
-                            <div class="card-actions justify-end mt-2">
-                                <span class="badge badge-outline badge-sm text-white">Communication</span>
+                            <div class="card-actions justify-end mt-2 mr-2">
+                                <span class="badge-sm text-white">Communication</span>
                             </div>
                         </div>
                     </article>
@@ -398,8 +395,8 @@
                                 Habitué au travail en équipe, aux revues de code et aux itérations rapides
                                 pour faire avancer le projet dans la bonne direction.
                             </p>
-                            <div class="card-actions justify-end mt-2">
-                                <span class="badge badge-outline badge-sm text-white">Collaboration</span>
+                            <div class="card-actions justify-end mt-2 mr-2">
+                                <span class="badge-sm text-white">Collaboration</span>
                             </div>
                         </div>
                     </article>
@@ -411,20 +408,20 @@
                                 Autonome sur les sujets qui me sont confiés, tout en sachant demander de l'aide
                                 et me former en continu pour proposer des solutions pertinentes.
                             </p>
-                            <div class="card-actions justify-end mt-2">
-                                <span class="badge badge-outline badge-sm text-white">Autonomie</span>
+                            <div class="card-actions justify-end mt-2 mr-2">
+                                <span class="badge-sm text-white">Autonomie</span>
                             </div>
                         </div>
                     </article>
                 </div>
 
-                <div class="flex flex-wrap gap-2 justify-center text-sm text-base-content/70">
-                    <span class="badge badge-outline">Communication</span>
-                    <span class="badge badge-outline">Esprit d'équipe</span>
-                    <span class="badge badge-outline">Curiosité</span>
-                    <span class="badge badge-outline">Rigueur</span>
-                    <span class="badge badge-outline">Adaptabilité</span>
-                    <span class="badge badge-outline">Autonomie</span>
+                <div class="flex flex-wrap gap-7 justify-center text-sm text-base-content/70">
+                    <span>Communication</span>
+                    <span>Esprit d'équipe</span>
+                    <span>Curiosité</span>
+                    <span>Rigueur</span>
+                    <span>Adaptabilité</span>
+                    <span>Autonomie</span>
                 </div>
             </div>
         </section>
