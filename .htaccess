@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# force HTTPS + non-www en une seule logique
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.portfolio\.tekedo\.fr [NC]
+RewriteRule ^(.*)$ https://portfolio.tekedo.fr/$1 [L,R=301]

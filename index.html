@@ -5,11 +5,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Edouard</title>
-    <meta name="description" content="Portfolio d'Edouard, développeur web. Présentation, compétences, projets et moyens de contact.">
 
+    <title>Edouard - Développeur Web Portfolio</title>
+
+    <meta name="description" content="Portfolio d'Edouard Todorov, développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS. Découvrez mes projets et compétences.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://portfolio.tekedo.fr/">
+
+    <!-- =========================
+    OPEN GRAPH
+    ========================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Edouard - Développeur Web Portfolio">
+    <meta property="og:description" content="Développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS. Découvrez mes projets et compétences.">
+    <meta property="og:url" content="https://portfolio.tekedo.fr/">
+    <meta property="og:image" content="https://portfolio.tekedo.fr/assets/images/preview.jpg">
+    <meta property="og:image:alt" content="Portfolio Edouard développeur web">
+    <meta property="og:site_name" content="Portfolio Edouard">
+
+    <!-- =========================
+    TWITTER CARD
+    ========================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Edouard - Développeur Web Portfolio">
+    <meta name="twitter:description" content="Développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS. Découvrez mes projets et compétences.">
+    <meta name="twitter:image" content="https://portfolio.tekedo.fr/assets/images/preview.jpg">
+    <meta name="twitter:image:alt" content="Edouard Todorov développeur web portfolio">
+
+    <!-- =========================
+    SEO RENFORCEMENT NOM
+    ========================= -->
+    <meta name="keywords" content="Edouard, Edouard Todorov, Todorov, développeur web, portfolio Edouard, développeur React, développeur Node.js, développeur Symfony">
+
+    <!-- =========================
+    STRUCTURED DATA (GOOGLE ENTITY)
+    ========================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://portfolio.tekedo.fr/#person",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://portfolio.tekedo.fr/"
+        },
+        "name": "Edouard Todorov",
+        "additionalName": "Todorov",
+        "alternateName": [
+            "Edouard",
+            "Edouard développeur web"
+        ],
+        "url": "https://portfolio.tekedo.fr",
+        "image": "https://portfolio.tekedo.fr/assets/images/edouard.webp",
+        "jobTitle": "Développeur Web",
+        "description": "Développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS.",
+        "knowsAbout": [
+            "React",
+            "Node.js",
+            "Symfony",
+            "JavaScript",
+            "Tailwind CSS",
+            "PHP"
+        ],
+        "sameAs": [
+            "https://github.com/edouard-todorov-formation",
+            "https://www.linkedin.com/in/edouard-todorov"
+        ]
+    }
+    </script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/output.css">
-    <!-- chargement du script JS -->
+
+    <!-- JS -->
     <script defer src="assets/js/script.js"></script>
 </head>
 <body class="min-h-screen bg-base-200 text-base-content tracking-wide">
@@ -22,7 +92,7 @@
     <header class="navbar bg-base-100 shadow-md sticky top-0 z-20 backdrop-blur bg-opacity-90">
         <div class="navbar-start">
             <a href="#hero" class="flex items-center gap-2">
-                <img src="assets/images/logo.webp" alt="logo Edouard" width="620" height="620" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
+                <img src="assets/images/logo.webp" alt="page's logo" width="620" height="620" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
                 <span class="font-bold text-xl tracking-tight">Edouard</span>
             </a>
         </div>
@@ -39,16 +109,23 @@
 
             <!-- Theme toggle button -->
             <button id="themeToggle" class="btn btn-ghost btn-sm btn-circle" type="button" aria-label="Changer de theme">
-                <img id="themeIconImage" src="assets/images/icon-moon.svg" alt="dark theme icon" width="24" height="24" class="w-5 h-5" />
+                <img id="themeIconImage" src="assets/images/icon-moon.svg" alt="Icon representing the dark theme" width="24" height="24" class="w-5 h-5" />
             </button>
 
             <!-- Menu burger -->
             <div class="dropdown dropdown-end md:hidden">
-                <label tabindex="0" class="btn btn-ghost btn-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <button tabindex="0" class="btn btn-ghost btn-circle" aria-label="Hamburger menu">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-5 w-5"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                </label>
+                </button>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li><a href="#about" class="text-base">À propos</a></li>
                     <li><a href="#stacks" class="text-base">Stacks</a></li>
@@ -88,7 +165,7 @@
                         <div class="absolute inset-0 blur-3xl bg-gradient-to-tr from-blue-300/40 via-secondary/30 to-accent/40 -z-10"></div>
                         <div class="avatar">
                             <div class="w-48 md:w-64 rounded-full ring-3 ring-blue-300 ring-offset-base-100 ring-offset-4 hover:scale-105 transition-transform duration-700">
-                                <img src="assets/images/edouard.webp" alt="Edouard" width="600" height="600" fetchpriority="high">
+                                <img src="assets/images/edouard.webp" alt="Photo of me" width="600" height="600" fetchpriority="high">
                             </div>
                         </div>
                     </div>
@@ -103,7 +180,7 @@
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
                         <p class="text-base">
-                            Je suis un développeur web passionné par les technologies modernes comme
+                            Je suis Edouard Todorov, un développeur web passionné par les technologies modernes comme
                             <span class="font-semibold">React</span>, <span class="font-semibold">NodeJS</span>,
                             <span class="font-semibold">Symfony</span> et <span class="font-semibold">Tailwind CSS</span>.
                         </p>
@@ -166,7 +243,7 @@
                                 width="512"
                                 height="512"
                                 class="w-20 h-20 object-contain theme-icon"
-                                alt="Github"
+                                alt="Github icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -189,7 +266,7 @@
                                 width="128"
                                 height="128"
                                 class="w-20 h-20 object-contain"
-                                alt="JavaScript"
+                                alt="JavaScript icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -212,7 +289,7 @@
                                 width="500"
                                 height="500"
                                 class="w-20 h-20 object-contain"
-                                alt="NodeJS"
+                                alt="NodeJS icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -235,7 +312,7 @@
                                 width="128"
                                 height="128"
                                 class="w-20 h-20 object-contain theme-icon"
-                                alt="Express" />
+                                alt="Express icon" />
                         </figure>
                         <div class="card-body">
                             <h3 class="card-title">Express</h3>
@@ -257,7 +334,7 @@
                                 width="500"
                                 height="500"
                                 class="w-20 h-20 object-contain"
-                                alt="React"
+                                alt="React icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -280,7 +357,7 @@
                                 width="920"
                                 height="552"
                                 class="w-20 h-20 object-contain"
-                                alt="Tailwind CSS"
+                                alt="Tailwind CSS icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -303,7 +380,7 @@
                                 width="512"
                                 height="269"
                                 class="w-20 h-20 object-contain"
-                                alt="PHP"
+                                alt="PHP icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -326,7 +403,7 @@
                                 width="512"
                                 height="512"
                                 class="w-20 h-20 object-contain"
-                                alt="Symfony"
+                                alt="Symfony icon"
                             />
                         </figure>
                         <div class="card-body">
@@ -349,7 +426,7 @@
                                 width="128"
                                 height="128"
                                 class="w-20 h-20 object-contain"
-                                alt="Docker" />
+                                alt="Docker icon" />
                         </figure>
                         <div class="card-body">
                             <h3 class="card-title">Docker</h3>
