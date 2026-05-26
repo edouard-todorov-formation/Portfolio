@@ -1,4 +1,4 @@
-<!-- Suprimer tracking-wide sur la ligne correspondante pour enlever le letter spacing -->
+<!-- Supprimer tracking-wide sur la ligne correspondante pour enlever le letter spacing -->
 
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Edouard - Développeur Web Portfolio</title>
+    <title>Développeur Web Full Stack | Portfolio d’Edouard Todorov</title>
 
     <meta name="description" content="Portfolio d'Edouard Todorov, développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS. Découvrez mes projets et compétences.">
+    <meta name="author" content="Edouard Todorov">
     <meta name="robots" content="index, follow">
 
     <!-- Canonical -->
@@ -18,7 +19,7 @@
     OPEN GRAPH
     ========================= -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Edouard - Développeur Web Portfolio">
+    <meta property="og:title" content="Développeur Web Full Stack | Portfolio d’Edouard Todorov">
     <meta property="og:description" content="Développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS. Découvrez mes projets et compétences.">
     <meta property="og:url" content="https://portfolio.tekedo.fr/">
     <meta property="og:image" content="https://portfolio.tekedo.fr/assets/images/preview.jpg">
@@ -29,7 +30,7 @@
     TWITTER CARD
     ========================= -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Edouard - Développeur Web Portfolio">
+    <meta name="twitter:title" content="Développeur Web Full Stack | Portfolio d’Edouard Todorov">
     <meta name="twitter:description" content="Développeur web spécialisé en React, Node.js, Symfony et Tailwind CSS. Découvrez mes projets et compétences.">
     <meta name="twitter:image" content="https://portfolio.tekedo.fr/assets/images/preview.jpg">
     <meta name="twitter:image:alt" content="Edouard Todorov développeur web portfolio">
@@ -75,7 +76,8 @@
         ]
     }
     </script>
-
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="assets/images/edouard.webp" type="image/webp" fetchpriority="high">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/output.css">
 
@@ -92,7 +94,7 @@
     <header class="navbar bg-base-100 shadow-md sticky top-0 z-20 backdrop-blur bg-opacity-90">
         <div class="navbar-start">
             <a href="#hero" class="flex items-center gap-2">
-                <img src="assets/images/logo.webp" alt="page's logo" width="620" height="620" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
+                <img src="assets/images/logo.webp" alt="Logo du site" width="620" height="620" class="w-10 h-10 rounded-full hover:rotate-180 transition-transform duration-700">
                 <span class="font-bold text-xl tracking-tight">Edouard</span>
             </a>
         </div>
@@ -108,8 +110,8 @@
         <div class="navbar-end gap-2">
 
             <!-- Theme toggle button -->
-            <button id="themeToggle" class="btn btn-ghost btn-sm btn-circle" type="button" aria-label="Changer de theme">
-                <img id="themeIconImage" src="assets/images/icon-moon.svg" alt="Icon representing the dark theme" width="24" height="24" class="w-5 h-5" />
+            <button id="themeToggle" class="btn btn-ghost btn-sm btn-circle" type="button" aria-label="Changer de thème">
+                <img id="themeIconImage" src="assets/images/icon-moon.svg" alt="Icône représentant le theme nuit" width="24" height="24" class="w-5 h-5" />
             </button>
 
             <!-- Menu burger -->
@@ -120,10 +122,12 @@
                          fill="none"
                          viewBox="0 0 24 24"
                          stroke="currentColor">
-                        <path stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M4 6h16M4 12h16M4 18h16" />
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
                     </svg>
                 </button>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -140,7 +144,7 @@
     #########################################################
     -->
     <main class="bg-base-200">
-        <!-- Flèche d'indication visible uniquement quand on est tout en haut de page -->
+        <!-- Scroll indicator arrow visible only when the user is at the top of the page -->
         <span id="scrollTopHint" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-opacity duration-200 opacity-0 pointer-events-none">
             <svg class="w-6 h-6 animate-bounce text-base-content" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -151,21 +155,39 @@
         <section id="hero" class="min-h-screen flex items-center justify-center px-4">
             <div class="max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">
                 <div class="space-y-4">
-                    <p class="uppercase tracking-[0.25em] text-xs text-blue-600 font-semibold">Développeur web</p>
-                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-                        Bonjour, moi c'est <span class="text-blue-600">Edouard</span>
+                    <h1 class="flex flex-col">
+                        <span class="mb-4 uppercase tracking-[0.25em] text-xs text-blue-600 font-semibold">
+                            Développeur web full stack
+                        </span>
+
+                        <!-- Main description (UX + SEO) -->
+                        <span class="text-4xl md:text-5xl font-extrabold leading-tight">
+                            Bonjour, moi c'est <span class="text-blue-600">Edouard Todorov</span>
+                        </span>
                     </h1>
-                    <p class="text-base md:text-lg text-base-content/80">
-                        Je conçois et développe des applications web modernes, performantes
-                        et maintenables, avec un focus sur l'expérience utilisateur et la qualité du code.
+
+                    <!-- Subtle SEO optimization  -->
+                    <p class="sr-only">
+                        Développeur web full stack spécialisé en React, Node.js et Symfony basé en France.
+                        Portfolio de projets web modernes, performants et responsives.
+                    </p>
+                    
+                    <p class="mt-3 text-base md:text-lg text-base-content/80">
+                        Développeur web full stack spécialisé en <strong>React</strong>, <strong>Node.js</strong> et <strong>Symfony</strong>.
+                        Je crée des applications web modernes, performantes et centrées sur l’expérience utilisateur.
+                    </p>
+                    
+                    <p class="text-sm text-base-content/70 mt-2">
+                        Portfolio de développeur web basé en France — React, Node.js, Symfony, Tailwind CSS.
                     </p>
                 </div>
+                <!-- Hero image -->
                 <div class="flex justify-center md:justify-end">
                     <div class="relative">
                         <div class="absolute inset-0 blur-3xl bg-gradient-to-tr from-blue-300/40 via-secondary/30 to-accent/40 -z-10"></div>
                         <div class="avatar">
                             <div class="w-48 md:w-64 rounded-full ring-3 ring-blue-300 ring-offset-base-100 ring-offset-4 hover:scale-105 transition-transform duration-700">
-                                <img src="assets/images/edouard.webp" alt="Photo of me" width="600" height="600" fetchpriority="high">
+                                <img src="assets/images/edouard.webp" alt="Edouard Todorov développeur web full stack" width="600" height="600" fetchpriority="high" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -180,14 +202,15 @@
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div class="space-y-4">
                         <p class="text-base">
-                            Je suis Edouard Todorov, un développeur web passionné par les technologies modernes comme
-                            <span class="font-semibold">React</span>, <span class="font-semibold">NodeJS</span>,
-                            <span class="font-semibold">Symfony</span> et <span class="font-semibold">Tailwind CSS</span>.
+                            Je suis Edouard Todorov, développeur web full stack passionné par la création d’applications web modernes et performantes avec <span class="font-semibold">PHP</span>, <span class="font-semibold">Symfony</span>, <span class="font-semibold">JavaScript</span>, <span class="font-semibold">React</span>, <span class="font-semibold">Node.js</span> et <span class="font-semibold">Tailwind CSS</span>.
+                            J’interviens sur des projets web complets en front-end et back-end, de la conception à la mise en production.
                         </p>
                         <p class="text-base">
                             J'aime transformer des idées en produits concrets, propres et bien structurés,
                             en mettant l'accent sur la lisibilité du code, les bonnes pratiques et la collaboration
                             avec les équipes produit et design.
+                            J’accorde une attention particulière à la performance et à l’expérience utilisateur,
+                            ainsi qu’à l’optimisation SEO technique et à la conception d’interfaces web responsives.
                         </p>
                         <p class="text-base">
                             Toujours curieux, je me forme en continu pour rester à jour et proposer des solutions
@@ -196,19 +219,39 @@
                     </div>
                     <div class="card bg-base-100 shadow-xl">
                         <div class="card-body">
-                            <h3 class="card-title mb-2">En quelques points</h3>
+                            <h3 class="card-title mb-4">En quelques points</h3>
                             <ul class="space-y-2 text-sm">
                                 <li class="flex items-center gap-2">
-                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content"></span>
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
                                     <span>Expérience en développement front et back</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content"></span>
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
+                                    <span>Développement d’API REST et applications web complètes</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
+                                    <span>Création d’interfaces responsive et accessibles</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
+                                    <span>Optimisation des performances et du SEO technique</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
                                     <span>Habitué au travail en équipe agile</span>
                                 </li>
                                 <li class="flex items-center gap-2">
-                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content"></span>
-                                    <span>Confortable avec Git, revues de code et CI/CD</span>
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
+                                    <span>Confortable avec Git et revues de code</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
+                                    <span>Déploiement et gestion d’environnements (Docker, serveurs)</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="inline-block h-2.5 w-2.5 rounded-full bg-base-content" aria-hidden="true"></span>
+                                    <span>Architecture de code propre et maintenable (MVC, services)</span>
                                 </li>
                             </ul>
                         </div>
@@ -240,10 +283,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/Github.png"
+                                loading="lazy"
+                                decoding="async"
                                 width="512"
                                 height="512"
                                 class="w-20 h-20 object-contain theme-icon"
-                                alt="Github icon"
+                                alt="Logo Github"
                             />
                         </figure>
                         <div class="card-body">
@@ -263,10 +308,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/javascript.svg"
+                                loading="lazy"
+                                decoding="async"
                                 width="128"
                                 height="128"
                                 class="w-20 h-20 object-contain"
-                                alt="JavaScript icon"
+                                alt="Logo JavaScript"
                             />
                         </figure>
                         <div class="card-body">
@@ -281,25 +328,27 @@
                         </div>
                     </article>
 
-                    <!-- NodeJS -->
+                    <!-- Node.JS -->
                     <article class="card bg-base-100 shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/NodeJS.png"
+                                loading="lazy"
+                                decoding="async"
                                 width="500"
                                 height="500"
                                 class="w-20 h-20 object-contain"
-                                alt="NodeJS icon"
+                                alt="Logo Node.js"
                             />
                         </figure>
                         <div class="card-body">
-                            <h3 class="card-title">NodeJS</h3>
+                            <h3 class="card-title">Node.js</h3>
                             <p class="text-sm">
-                                Développement de backends performants en JavaScript, APIs REST et intégration
+                                Développement de back-end performants en JavaScript, APIs REST et intégration
                                 avec des bases de données et services externes.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="mr-3">Backend</span>
+                                <span class="mr-3">Back-end</span>
                             </div>
                         </div>
                     </article>
@@ -309,10 +358,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/express.svg"
+                                loading="lazy"
+                                decoding="async"
                                 width="128"
                                 height="128"
                                 class="w-20 h-20 object-contain theme-icon"
-                                alt="Express icon" />
+                                alt="Logo Express" />
                         </figure>
                         <div class="card-body">
                             <h3 class="card-title">Express</h3>
@@ -321,7 +372,7 @@
                                 simple, rapide et adaptée aux applications modernes.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="mr-3">Backend</span>
+                                <span class="mr-3">Back-end</span>
                             </div>
                         </div>
                     </article>
@@ -331,10 +382,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/React.png"
+                                loading="lazy"
+                                decoding="async"
                                 width="500"
                                 height="500"
                                 class="w-20 h-20 object-contain"
-                                alt="React icon"
+                                alt="Logo React"
                             />
                         </figure>
                         <div class="card-body">
@@ -354,10 +407,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/Tailwind.png"
+                                loading="lazy"
+                                decoding="async"
                                 width="920"
                                 height="552"
                                 class="w-20 h-20 object-contain"
-                                alt="Tailwind CSS icon"
+                                alt="Logo Tailwind CSS"
                             />
                         </figure>
                         <div class="card-body">
@@ -377,10 +432,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/PHP.png"
+                                loading="lazy"
+                                decoding="async"
                                 width="512"
                                 height="269"
                                 class="w-20 h-20 object-contain"
-                                alt="PHP icon"
+                                alt="Logo PHP"
                             />
                         </figure>
                         <div class="card-body">
@@ -390,7 +447,7 @@
                                 et de bibliothèques existantes.
                             </p>
                             <div class="card-actions justify-end">
-                                <span class="mr-3">Backend</span>
+                                <span class="mr-3">Back-end</span>
                             </div>
                         </div>
                     </article>
@@ -400,10 +457,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/Symfony.png"
+                                loading="lazy"
+                                decoding="async"
                                 width="512"
                                 height="512"
                                 class="w-20 h-20 object-contain"
-                                alt="Symfony icon"
+                                alt="Logo Symfony"
                             />
                         </figure>
                         <div class="card-body">
@@ -423,10 +482,12 @@
                         <figure class="w-30 h-30 mx-auto p-5">
                             <img
                                 src="assets/images/docker.svg"
+                                loading="lazy"
+                                decoding="async"
                                 width="128"
                                 height="128"
                                 class="w-20 h-20 object-contain"
-                                alt="Docker icon" />
+                                alt="Logo Docker" />
                         </figure>
                         <div class="card-body">
                             <h3 class="card-title">Docker</h3>
@@ -518,8 +579,25 @@
             <p class="text-xs text-base-content/70">
                 Photo : edouard.png (Edouard Todorov) - Tous droits réservés.
             </p>
-        </aside>
-        </footer>
+        <!-- Social links -->
+        <nav class="flex gap-4 mt-3 text-sm">
+            <a href="https://github.com/..." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Profil GitHub de Edouard Todorov"
+               class="link link-hover">
+                GitHub
+            </a>
 
+            <a href="https://linkedin.com/..." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Profil LinkedIn de Edouard Todorov"
+               class="link link-hover">
+                LinkedIn
+            </a>
+        </nav>
+        </aside>
+    </footer>
 </body>
 </html>

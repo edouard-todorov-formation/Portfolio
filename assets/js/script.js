@@ -55,7 +55,7 @@ function toggleTheme() {
         page.setAttribute("data-theme", nextTheme);
         if (iconImage) {
             iconImage.src = nextTheme === "dark" ? "assets/images/icon-sun.svg" : "assets/images/icon-moon.svg";
-            iconImage.alt = nextTheme === "dark" ? "light theme icon" : "dark theme icon";
+            iconImage.alt = nextTheme === "dark" ? "Icône représentant le theme jour" : "Icône représentant le theme nuit";
         }
     }
     // Application du thème sauvegardé ou du thème par défaut

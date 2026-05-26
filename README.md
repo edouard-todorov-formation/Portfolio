@@ -148,6 +148,33 @@ Le fichier genere est :
 
 - `assets/css/output.css`
 
+  ##########################################
+ ######### Prochaine version ##############
+##########################################
+
+-Ajouter une section “Projects”
+
+-Ajouter du contenu pour rank sur :
+développeur web
+développeur full stack
+React developer
+Symfony developer
+Google veut voir :
+Vocabulaire métier réel
+profondeur technique
+signaux d’expertise (E-E-A-T)
+(3 emplacements parfaits :
+1. Hero (court + impact)
+déjà OK (ne pas trop gonfler)
+2. Section “À propos”  (meilleur endroit)
+enrichir ici
+3. Nouvelle section “Méthodologie” (très puissant SEO)
+ça fait souvent la différence pour rank)
+
+-Section SEO Méthodologie
+
+-Liens vers page detaillant les stacks
+
 ## Auteur
 
 Edouard
