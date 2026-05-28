@@ -6,6 +6,18 @@ html {
     font-size: 17px;
 }
 
+/* Smooth scrolling for anchor navigation */
+@layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+/* Scroll offset for anchor navigation (sticky header compensation) */
+section {
+    scroll-margin-top: 90px;
+}
+
 /*#########################################################
 # Mobile css rules (<= 450px)
 #########################################################*/
